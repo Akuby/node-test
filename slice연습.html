@@ -7,20 +7,30 @@
   <title>Document</title>
 </head>
 <body>
-  
 </body>
 <script>
-  const arr = ['aaa', 'bbb', 'ccc', 'ddd', 'eee']
-  let del_index = 2
-  // 삭제 대상 데이터의 left_array
-  let left = arr.slice(0,del_index)
-  // 삭제 대상 데이터의 right_array
-  let right = arr.slice(del_index+1)
+  var arr = [
+  {name : '소나타', price : '20000000', effe : '11.0km'},
+  {name : '아반떼', price : '30000000', effe : '15.4km'},
+  {name : '투싼', price : '40000000', effe : '14.6km'},
+  {name : '싼타페', price : '45000000', effe : '10.0km'},
+  {name : '코나', price : '30000000', effe : '12.1km'}
+]
 
-  console.log(arr, left, right)
-  console.log([
-    ...left, 
-    ...right])
+  let del_name = prompt('삭제할 차량을 입력하세요');
+  // 삭제 대상 데이터의 left_array
+  arr.forEach(el => {
+    if (el.name == del_name) {
+      
+    }
+  })
+  // let left = arr.slice(0,del_index)
+  // // 삭제 대상 데이터의 right_array
+  // let right = arr.slice(del_index+1)
+
+  // console.log([
+  //   ...left, 
+  //   ...right])
 </script>
 </html>
 
