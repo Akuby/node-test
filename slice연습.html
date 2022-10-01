@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,12 +16,15 @@
   {name : '싼타페', price : '45000000', effe : '10.0km'},
   {name : '코나', price : '30000000', effe : '12.1km'}
 ]
-
   let del_name = prompt('삭제할 차량을 입력하세요');
   // 삭제 대상 데이터의 left_array
   arr.forEach(el => {
     if (el.name == del_name) {
-      
+      let delIndex = arr.indexOf(el);
+      let left = arr.slice(0,delIndex);
+      let right = arr.slice(delIndex+1);
+      var 새어레이 = [...left, ...right]
+      console.log(새어레이)
     }
   })
   // let left = arr.slice(0,del_index)
