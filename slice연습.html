@@ -16,17 +16,28 @@
   {name : '싼타페', price : '45000000', effe : '10.0km'},
   {name : '코나', price : '30000000', effe : '12.1km'}
 ]
+  let userShow = [];
+  let isFound = 0;
+  arr.forEach(el => {
+    userShow.push(" " + el.name);
+  });
+  alert(userShow);
   let del_name = prompt('삭제할 차량을 입력하세요');
   // 삭제 대상 데이터의 left_array
+  var delArr = []
   arr.forEach(el => {
     if (el.name == del_name) {
       let delIndex = arr.indexOf(el);
-      let left = arr.slice(0,delIndex);
-      let right = arr.slice(delIndex+1);
-      var 새어레이 = [...left, ...right]
-      console.log(새어레이)
+      let left = arr.slice(0,delIndex),
+          right = arr.slice(delIndex+1);
+      delArr = [...left, ...right]; // delArr는 json배열
+      console.log(delArr)
+      isFound = 1;
     }
   })
+  if (isFound == 0) {
+      alert('차량을 찾을 수 없습니다!')
+    }
   // let left = arr.slice(0,del_index)
   // // 삭제 대상 데이터의 right_array
   // let right = arr.slice(del_index+1)
